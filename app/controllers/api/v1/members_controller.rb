@@ -12,7 +12,8 @@ class Api::V1::MembersController < ApplicationController
 
   # GET /members/:id
   def show
-    nil unless check_access
+    return unless check_access
+
     # your code goes here
     render json: { member: @member }
   end
@@ -32,7 +33,8 @@ class Api::V1::MembersController < ApplicationController
 
   # PUT /members/:id
   def update
-    nil unless check_access
+    return unless check_access
+
     # your code goes here
     if @member.update(member_params)
       render json: @member, status: 200

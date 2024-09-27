@@ -1,0 +1,17 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths: {}
+components:
+  securitySchemes:
+    CSRF_Protection:
+      description: CSRF token
+      type: apiKey
+      name: X-CSRF-Token
+      in: header
+security:
+- CSRF_Protection: []
+servers:
+- url: ''
